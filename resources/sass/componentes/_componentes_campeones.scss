@@ -1,0 +1,691 @@
+@use "../base";
+@use "../base/base_campeones";
+@use "../base/mixins_campeones";
+.campeones_contenedor{
+    display: grid;
+    background-position-x: 45.99%;
+    background-position-y: 50%;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(11, 11, 11, 0) 100%),url(./../../public/storage/img/campeones_img.jpg);
+    background-size: 850px;
+    background-repeat: no-repeat;
+    padding: 20px;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    .campeones_figura{
+        margin: 20px;
+        width: 100%;
+        height: 100%;
+        transition: all 400ms ease-out;
+        will-change: transform;
+        background-size: cover;
+        display: grid;
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 10px 20px rgba(255, 253, 253, 0.848);
+        padding: 20px;
+        width: 280px;
+        height: 440px;
+        background-position-x: 40%;
+        grid-template-areas:
+        "rol1 . rol2"
+        "campeones_desc1  . campeones_desc2"
+        "campeones_parr campeones_parr  campeones_parr";
+        .campeones_icono{
+            align-self: center;
+          }
+          .campeones_img1{
+            height: 50px;
+            align-self: center;
+          }
+          .campeones_img2{
+            height: 10px;
+            align-self: center;
+            justify-self: center;
+            width: 80px;
+          }
+        .rol1{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 400ms ease-out;
+            opacity: 0;
+            visibility: hidden;
+            text-align: center;
+            grid-area: rol1;
+          }
+          .rol2{
+            position: absolute;
+            transition: all 400ms ease-out;
+            opacity: 0;
+            visibility: hidden;
+            text-align: center;
+            grid-area: rol2;
+          }
+          .campeones_desc1{
+            height: 100%;
+            transition: all 400ms ease-out;
+            opacity: 0;
+            visibility: hidden;
+            text-align: center;
+            font-weight: 600;
+            padding-left: 30px;
+            align-self: center;
+            grid-area: campeones_desc1;
+            .desc1{
+                @include mixins_campeones.desc1;
+            }
+            .desc2{
+                @include mixins_campeones.desc2;
+            }
+          }
+          .campeones_desc2{
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 400ms ease-out;
+            opacity: 0;
+            visibility: hidden;
+            text-align: center;
+            font-weight: 600;
+            align-self: center;
+            grid-area: campeones_desc2;
+            .desc1{
+                @include mixins_campeones.desc1;
+            }
+            .desc2{
+                @include mixins_campeones.desc2;
+            }
+          }
+          .campeones_parr{
+            position: absolute;
+            transition: all 400ms ease-out;
+            opacity: 0;
+            visibility: hidden;
+            text-align: center;
+            align-self: center;
+            grid-area: campeones_parr;
+            transition: 2s;
+            .campeones_texto{
+                font-size: 1.1rem;
+                text-align: center;
+                color: #ceae57;
+              }
+          }
+          .campeon_nombre{
+            .nombre{
+                text-align: center;
+                font-weight: 600;
+                color: #e8b322;
+                font-size: 1.5rem;
+              }
+              .procedencia{
+                text-align: center;
+                color: white;
+                font-weight: 600;
+                font-size: 1rem;
+              }
+          }
+      }
+      .campeones_figura1{
+        background-image: url(./../../public/storage/img/ahri.jpg);
+        background-position-x: 70%;
+      }
+      .campeones_figura2{
+        background-image: url(./../../public/storage/img/akali.jpg);
+      }
+      .campeones_figura3{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.119) 0%, rgba(11, 11, 11, 0.136) 100%),url(./../../public/storage/img/blitz.jpg);
+        background-position-x: 60%;
+        background-position-y: 60%;
+      }
+      .campeones_figura4{
+        background-image: url(./../../public/storage/img/cho.jpg);
+        background-position-x: 60%;
+      }
+      .campeones_figura5{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.079) 0%, rgba(11, 11, 11, 0.085) 100%),url(./../../public/storage/img/darius.jpg);
+        background-position-x: 60%;
+      }
+      .campeones_figura6{
+        background-image: url(./../../public/storage/img/heimer.jpg);
+      }
+      .campeones_figura7{
+        background-image: url(./../../public/storage/img/kennen.jpg);
+        background-position-x: 88%;
+      }
+      .campeones_figura8{
+        background-image: url(./../../public/storage/img/kog.jpg);
+      }
+      .campeones_figura9{
+        background-image: url(./../../public/storage/img/kayn.jpg);
+      }
+      .campeones_figura10{
+        background-image: url(./../../public/storage/img/aurelion.jpg);
+        background-position-x: 60%;
+      }
+      .campeones_figura11{
+        background-position-x: 80%;
+        background-image: url(./../../public/storage/img/vex.jpg);
+
+      }
+      .campeones_figura12{
+        background-position-x: 50%;
+        background-image: url(./../../public/storage/img/voli.jpg);
+
+      }
+      .campeones_figura13{
+        background-position-x: 70%;
+        background-position-y: 50%;
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(11, 11, 11, 0.4) 100%),url(./../../public/storage/img/thresh.jpg);
+
+      }
+      .campeones_figura14{
+        background-position-x: 80%;
+        background-image: url(./../../public/storage/img/taliyah.jpg);
+
+      }
+      .campeones_figura15{
+        background-position-x: 60%;
+        background-image: url(./../../public/storage/img/renek.jpg);
+
+      }
+      .campeones_figura16{
+        background-position-x: 80%;
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(11, 11, 11, 0.3) 100%),url(./../../public/storage/img/janna.jpg);
+      }
+      .campeones_figura:hover > .campeones_parr {
+    opacity: 1;
+    visibility: visible;
+    }
+    .campeones_figura:hover .nombre{
+        position: absolute;
+        transform-origin: 0% 0%;
+        transform: translate(-300%, 0);
+        visibility: hidden;
+    }
+    .campeones_figura:hover .procedencia{
+        position: absolute;
+        transform-origin: 0% 0%;
+        transform: translate(-300%, 0);
+        visibility: hidden;
+    }
+    .campeones_figura:hover > .campeones_icono{
+        opacity: 1;
+        visibility: visible;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    .campeones_figura:hover > .rol2{
+        opacity: 1;
+        visibility: visible;
+        margin-top: 50px;
+    }
+    .campeones_figura:hover > .campeones_desc1{
+        opacity: 1;
+        visibility: visible;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .campeones_figura:hover > .campeones_desc2{
+        opacity: 1;
+        visibility: visible;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .campeones_figura1:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/ahri.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura2:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/akali.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura3:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/blitz.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura4:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/cho.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura5:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/darius.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura6:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/heimer.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura7:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/kennen.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura8:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/kog.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura9:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/kayn.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura10:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/aurelion.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura11:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/vex.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura12:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/voli.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura13:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/thresh.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura14:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/taliyah.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura15:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/renek.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+    .campeones_figura16:hover{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/janna.jpg);
+        transform: scale(1.12);
+        border: 3px solid;
+        border-style: ridge;
+        border-color: base.$color-secondary;
+    }
+}
+.btn_campeones{
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  margin-bottom: 1rem;
+    .btn_campeones_accion{
+      color: white;
+      text-decoration: double 3px;
+      text-shadow: 3px;
+      font-weight: 600;
+      border: 3px;
+      border-radius: 1rem;
+      padding: 13px;
+      background-image: linear-gradient(to bottom, rgba(53, 53, 50, 0.86) 0%, rgb(24, 157, 157)100%);
+      &:hover{
+        box-shadow: 0px 10px 20px rgba(255, 253, 253, 0.848);
+        background-image: linear-gradient(to bottom, rgb(31, 168, 152) 0%, rgba(47, 47, 43, 0.778) 100%);
+      }
+    }
+}
+@media screen and (max-width: map-get(base_campeones.$breakpointss, "large")) {
+  .campeones_contenedor{
+    grid-template-columns: 1fr 1fr;
+   }
+   .campeones_figura{
+    max-width: 270px;
+    height: 440px;
+   }
+   .campeones_carta{
+    justify-self: center;
+  }
+}
+@media screen and (max-width: map-get(base_campeones.$breakpointss, "medium")) {
+  .campeones_contenedor{
+    grid-template-columns: 1fr;
+  }
+  .campeones_figura{
+    height: 440px;
+  }
+}
+
+//destacado
+.destacado_contenedor{
+    background-color: base.$color-tertiary;
+    padding: 20px;
+    height: 226px;
+    box-shadow: base.$box-shadow;
+    .destacado{
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+        "figura_destacado   actualizacion"
+        "figura_destacado   actualizacion_desc";
+        .figura_destacado{
+            transition: 1s;
+            width: 50%;
+            height: 170%;
+            background-image: url(./../../public/storage/img/destacado.jpg);
+            background-size: cover;
+            border: 7px solid;
+            border-radius: 3px;
+            border-style: groove;
+            border-color: base.$color-primary;
+            grid-area: figura_destacado;
+            justify-self: end;
+            &:hover .destacado_titulo{
+                opacity: 1;
+                color: white;
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(11, 11, 11, 0.1) 100%),url(./../../public/storage/img/destacado.jpg) ;
+            }
+            .destacado_titulo{
+                opacity: 0;
+                text-align: center;
+                transition: .5s;
+            }
+        }
+        .actualizacion{
+            font-weight: 400;
+            margin-top: 50px;
+            grid-area: actualizacion;
+            border-left: 5px solid;
+            border-right: 0px;
+            color: base.$color-btn-secondary;
+            align-self: flex-end;
+        }
+        .actualizacion_desc{
+            font-weight: 600;
+            grid-area: actualizacion_desc;
+        }
+    }
+
+}
+@media screen and (max-width: map-get(base_campeones.$breakpointss, "large")) {
+    .destacado{
+        grid-template-areas:
+        "figura_destacado"
+        "actualizacion"
+        "actualizacion_desc";
+     }
+     .figura_destacado{
+      text-align: center;
+      justify-self: center;
+      height: 400%;
+     }
+     .actualizacion{
+      color: white;
+      justify-self: center;
+     }
+     .actualizacion_desc{
+      color: #facc50;
+      font-size: 10px;
+      justify-self: center;
+     }
+}
+@media screen and (max-width: map-get(base_campeones.$breakpointss, "medium")) {
+    .actualizacion_desc{
+        width: 43%;
+      }
+      .figura_destacado{
+        height: 420%;
+        background-position-x: 70%;
+      }
+}
+
+//regiones
+.regiones_contenedor{
+    margin: 0px;
+    .regiones{
+        .regiones_figura{
+            background-size: cover;
+            height: 600px;
+            display: grid;
+            row-gap: 5px;
+            grid-template-areas:
+            ".  regiones_titulo ."
+            ".    regiones_icono  ."
+            "regiones_parr  regiones_parr regiones_parr";
+          }
+          .regiones_figura1{
+            background-image: url(../../../public/storage/img/aguasturbias.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(11, 11, 11, 0.5) 100%),url(../../../public/storage/img/aguasturbias.jpg);
+              }
+          }
+          .regiones_figura2{
+            background-image: url(./../../public/storage/img/demacia.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(11, 11, 11, 0.8) 100%),url(./../../public/storage/img/demacia.jpg);
+              }
+          }
+          .regiones_figura3{
+            background-image: url(./../../public/storage/img/vacio.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(11, 11, 11, 0.5) 100%),url(./../../public/storage/img/vacio.jpg);
+              }
+          }
+          .regiones_figura4{
+            background-image: url(./../../public/storage/img/freljord.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/freljord.jpg);
+              }
+          }
+          .regiones_figura5{
+            background-image: url(./../../public/storage/img/jonia.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/jonia.jpg);
+              }
+          }
+          .regiones_figura6{
+            background-image: url(./../../public/storage/img/bandle.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/bandle.jpg);
+              }
+          }
+          .regiones_figura7{
+            background-image: url(./../../public/storage/img/islas.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/islas.jpg);
+              }
+          }
+           .regiones_figura8{
+            background-image: url(./../../public/storage/img/ixtal.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/ixtal.jpg);
+              }
+          }
+          .regiones_figura9{
+            background-image: url(./../../public/storage/img/noxus.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/noxus.jpg);
+              }
+          }
+          .regiones_figura10{
+            background-image: url(./../../public/storage/img/piltover.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/piltover.jpg);
+              }
+          }
+          .regiones_figura11{
+            background-image: url(./../../public/storage/img/shurima.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/shurima.jpg);
+              }
+          }
+          .regiones_figura12{
+            background-image: url(./../../public/storage/img/targon.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/targon.jpg);
+              }
+          }
+          .regiones_figura13{
+            background-image: url(./../../public/storage/img/zaun.jpg);
+            transition: 0.5s;
+            &:hover{
+                background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(11, 11, 11, 0.7) 100%),url(./../../public/storage/img/zaun.jpg);
+              }
+          }
+          .regiones_icono{
+            opacity: 0;
+            transition: 1s;
+            grid-area: regiones_icono;
+            align-self: flex-end;
+            justify-self: center;
+            text-align: center;
+            width: 50%;
+          }
+          .regiones_img{
+            height: 100px;
+          }
+          .regiones_titulo{
+            opacity: 0;
+            padding: 10px;
+            transition: 1s;
+            font-weight: 600;
+            font-size: 4rem;
+            color: #e9ac11de;
+            border-bottom: 5px solid;
+            border-top: 0px;
+            border-style: ridge;
+            font-stretch: expanded;
+            border-color: #b58709;
+            align-self: flex-end;
+            grid-area: regiones_titulo;
+            text-align: center;
+            justify-self: center;
+            align-self: flex-end;
+          }
+          .regiones_parr{
+            color: #cea758;
+            opacity: 0;
+            transition: 1s;
+            padding: 10px;
+            font-weight: 400;
+            grid-area: regiones_parr;
+            text-align: center;
+            font-size: 1.7rem;
+          }
+          @media screen and (max-width: map-get(base_campeones.$breakpointss, "large")) {
+            .regiones_parr{
+              font-size: 1.4rem;
+            }
+          }
+          @media screen and (max-width: map-get(base_campeones.$breakpointss, "medium")) {
+            .regiones_titulo{
+              font-size: 1.8rem;
+            }
+            .regiones_parr{
+              font-size: 1.1rem;
+            }
+          }
+    }
+  }
+
+  .regiones_figura:hover .regiones_parr{
+    opacity: 1;
+  }
+  .regiones_figura:hover .regiones_icono{
+    opacity: 1;
+  }
+  .regiones_figura:hover .regiones_titulo{
+    opacity: 1;
+  }
+  .btn_regiones{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    margin: 1rem;
+      .btn_regiones_accion{
+        color: white;
+        text-decoration: double 3px;
+        text-shadow: 3px;
+        font-weight: 600;
+        border: 3px;
+        border-radius: 1rem;
+        padding: 13px;
+        background-image: linear-gradient(to bottom, rgba(53, 53, 50, 0.86) 0%, rgb(24, 157, 157)100%);
+        &:hover{
+          box-shadow: 0px 10px 20px rgba(255, 253, 253, 0.848);
+          background-image: linear-gradient(to bottom, rgb(31, 168, 152) 0%, rgba(47, 47, 43, 0.778) 100%);
+        }
+      }
+  }
+  @media screen and (max-width: map-get(base_campeones.$breakpointss, "large")) {
+    .regiones_figura{
+      background-position-x: 50%;
+      height: 1100px;
+    }
+  }
+  @media screen and (max-width: map-get(base_campeones.$breakpointss, "medium")) {
+    .regiones_contenedor{
+      width: 100%;
+    }
+    .regiones_figura{
+      height: 1100px;
+    }
+    .regiones_parr{
+      line-height: 1.6rem;
+    }
+
+  }
+//titulo
+.titulo_contenedor{
+    @include mixins_campeones.titulo;
+}
+@media screen and (max-width: map-get(base_campeones.$breakpointss, "large")) {
+    .titulo_segundo{
+        font-size: 5rem;
+    }
+}
+//
+

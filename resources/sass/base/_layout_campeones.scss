@@ -1,0 +1,111 @@
+@use "../base/base_campeones";
+@use "../base/base";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.body_campeones{
+  margin-top: 80px;
+  background-color: black;
+}
+ul, ol {
+    list-style: none;
+}
+
+div {
+    display: block;
+}
+/* hamburger */
+input{
+  display: none;
+}
+@media screen and (max-width: map-get(base_campeones.$breakpointss, "large")) {
+  body{
+    margin: 0;
+  }
+  .menu{
+      scroll-behavior: smooth;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      justify-items: center;
+  }
+  .menu{
+    background-color: base.$color-bg;
+    padding: 15px;
+    border-radius: 9px;
+    box-shadow:  base.$box-shadow;
+    transform-origin: 0% 0%;
+    transform: translate(-150%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+ }
+ .menu_nav{
+  background-color: base.$color-bg;
+  padding: 5px;
+  border-radius: 9px;
+  box-shadow: base.$box-shadow;
+  transform-origin: 0% 0%;
+  transform: translate(-150%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+ }
+ .navbar input{
+    display: inline;
+    justify-self: end;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    transform: translate(5px, 5px);
+    position: fixed;
+ }
+ .nav_link_resp{
+  text-decoration: none;
+  color: white;
+  transition: .5s;
+ }
+ .nav_link_resp:hover{
+  border-radius: 2px;
+  border: 2px solid;
+  padding: 2px;
+  background-color: #f9f9f949;
+  }
+ .navbar span{
+    justify-self: end;
+    display: block;
+    width: 33px;
+    height: 5px;
+    margin-bottom: 7px;
+    background-color: #b58709;
+    border-radius: 3px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.08, 1);
+    transform: translate(5px, 5px);
+    background: 0.5s cubic-bezier(0.77, 0.2, 0.08, 1);
+    opacity: 0.5s ease;
+  }
+  .navbar span:first-child{
+    transform-origin: 0% 0%;
+  }
+  .navbarspan:nth-last-child(1){
+    transform-origin: 50% 100%;
+  }
+  .navbar input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(12px, 18px);
+  }
+  .navbar input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  .navbar input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(-1px, -4px);
+  }
+  .navbar input:checked ~ div.menu{
+    transform: none;
+ }
+}
+

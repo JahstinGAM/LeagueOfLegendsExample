@@ -1,0 +1,235 @@
+@use "../base";
+.type-player-guide{
+    .style-section{
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        min-height: 800px;
+        padding-bottom: 9.375rem;
+        background-color: rgb(3, 6, 8);
+        color: white;
+        .style-wrapper{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            .style-title{
+                width: 60px;
+                flex: 0 0 auto;
+                position: relative;
+                align-self: center;
+                .style-text-container{
+                    z-index: 10;
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    .style-text{
+                        text-transform: uppercase;
+                        padding-top: 100%;
+                        transform: rotate(-90deg) translate(-100%, -50%);
+                        transform-origin: left top;
+                        white-space: nowrap;
+                        color: white;
+                        font-size: 0.625rem;
+                        letter-spacing: 0.25em;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .style-content{
+                flex: 1 1 100%;
+                min-width: 0px;
+                .style-content-container{
+                    width: 100%;
+                    height: 100%;
+                    max-width: 1300px;
+                    margin: 0px auto;
+                    display: flex;
+                    align-items: center;
+                    .style-map-container{
+                        flex: 1 1 auto;
+                        min-width: 0px;
+                        .style-container{
+                            width: 200%;
+                            margin: 10% 0px 0px -50%;
+                            max-width: 1500px;
+                            // width: 100%;
+                            .style-container-inner{
+                                box-sizing: border-box;
+                                top: 0px;
+                                left: 0px;
+                                width: 100%;
+                                height: 100%;
+                                padding: calc(230px - 17%) 10.5% 0px;
+                                .style-container-inner2{
+                                    position: relative;
+                                    top: 0px;
+                                    left: 0px;
+                                    width: 100%;
+                                    padding-top: 65.9722%;
+                                    .style-map-camera{
+                                        transform: translate3d(-9.744px, -5.7025px, 0px);
+                                        position: absolute;
+                                        left: 0px;
+                                        top: 0px;
+                                        width: 100%;
+                                        height: 100%;
+                                        .style-layer{
+                                            //opacity: 0;
+                                            
+                                            position: absolute;
+                                            top: 0px;
+                                            left: 0px;
+                                            width: 100%;
+                                            height: 100%;
+                                            transform: translateY(0px);
+                                            // &:hover{
+                                            //     transform-origin: center top;
+                                            //     animation: 3.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s 1 normal forwards running dEfjBQ;
+                                            // }
+                                            .style-img{
+                                                width: 100%;
+                                                height: auto;
+                                                border-style: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .style-content-croisv{
+                        z-index: 1;
+                        text-align: center;
+                        .style-wrapper{
+                            position: relative;
+                            z-index: 1;
+                            text-align: center;
+                            color: rgb(255, 255, 255);
+                            .style-heading{
+                                margin: 0px;
+                                font-weight: normal;
+                                .style-intro{
+                                    text-transform: uppercase;
+                                    font-style: italic;
+                                    line-height: 1.1;
+                                    display: block;
+                                    font-size: 1.5rem;
+                                    font-weight: 600;
+                                    letter-spacing: 0.1em;
+                                    .style-reveal-wrapper{
+                                        display: inline-block;
+                                        // span{
+                                        //     font-style: italic;
+                                        // }
+                                    }
+                                }
+                                .style-title{
+                                    
+                                    text-transform: uppercase;
+                                    font-style: italic; 
+                                    .style-reveal-wrapper{
+                                        //font-family: base.$family;
+                                        line-height: 1.1;
+                                        font-weight: 800;
+                                        letter-spacing: 0.03em;
+                                    }
+                                }
+                            }
+                            .style-description{
+                                position: relative;
+                                max-width: 600px;
+                                text-align: center;
+                                padding: 0px 10%;
+                                margin: 12px auto 0px;
+                                font-size: 0.875rem;
+                                letter-spacing: 0.08em;
+                                line-height: 1.6;
+                                transition: opacity 500ms ease-out 500ms;
+                                opacity: 1;
+                            }
+                        }
+                        .style-actions{
+                            margin-top: 25px;
+                            .style-anchor{
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                color: rgb(1, 1, 1);
+                                cursor: pointer;
+                                min-width: 10.75rem;
+                                margin: 12px;
+
+                                position: relative;
+                                display: inline-block;
+                                
+                                height: 56px;
+                                padding: 0px;
+                                
+                                
+                                font-size: 0.8125rem;
+                                letter-spacing: 0.15em;
+                                font-weight: bold;
+                                background-color: transparent;
+                                border: 0px;
+                                .style-inner{
+                                    box-sizing: border-box;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;;
+                                    justify-content: center;
+                                    min-width: 195px;
+                                    height: 56px;
+                                    padding: 0px 40px;
+                                    .style-reveal-wrapper{
+                                        position: absolute;
+                                        left: 0px;
+                                        top: 0px;
+                                        width: 100%;
+                                        height: 100%;
+                                        .style-background{
+                                            position: absolute;
+                                            left: 0px;
+                                            top: 0px;
+                                            width: 100%;
+                                            min-width: 195px;
+                                            height: 56px;
+                                            transition: background-color 200ms ease 0s, opacity 0.01s ease 400ms;
+                                            background-color: rgb(208, 168, 92);
+                                            opacity: 1;
+                                        }
+                                    }
+                                    .style-label{
+                                        position: relative;
+                                        z-index: 1;
+                                        opacity: 1;
+                                    }
+                                }
+                                .style-container{
+                                    position: absolute;
+                                    inset: 1px;
+                                    pointer-events: none;
+                                    .style-canvas{
+                                        position: absolute;
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                            }
+                            .style-anchor-primary{
+                                @extend .style-anchor;
+                                .style-inner{
+                                    .style-reveal-wrapper{
+                                        .style-background{
+                                            background-color: rgb(11, 198, 227);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

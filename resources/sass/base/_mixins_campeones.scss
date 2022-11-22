@@ -1,0 +1,57 @@
+@use "../base/base_campeones";
+@use "../base/base";
+@mixin titulo {
+        margin-top: 50px;
+        background-color: white;
+        padding: 20px;
+        .titulo{
+            display: grid;
+            gap: 0px;
+            grid-template-areas:
+            ".  titulo_primero  ."
+            ".   titulo_primero  ."
+            ".   titulo_segundo  ."
+            ".   titulo_segundo  ."
+            ".   titulo_parr  ."
+            ".   titulo_parr  .";
+            .titulo_primero{
+                font-size: 2rem;
+                font-weight: 300;
+                grid-area: titulo_primero;
+                text-align: center;
+            }
+            .titulo_segundo{
+                font-size: 10rem;
+                font-weight: 600;
+                grid-area: titulo_segundo;
+                text-align: center;
+            }
+            .titulo_parr{
+                grid-area: titulo_parr;
+                text-align: center;
+                justify-self: center;
+                font-weight: 300;
+                width: 40%;
+                font-size: 1.1rem;
+            }
+        }
+    }
+@mixin desc1 {
+    font-weight: 600;
+    color: white;
+    position: absolute;
+    margin: 15px;
+    margin-left: 0;
+}
+@mixin desc2 {
+    font-weight: 400;
+    color: #b58709;
+    position: absolute;
+}
+@mixin footer_buttons {
+    transition: .5s;
+    text-decoration: none;
+    color: white;
+     margin-left: 70px;
+    font-weight: 400;
+}
