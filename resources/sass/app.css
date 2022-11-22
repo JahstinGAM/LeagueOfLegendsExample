@@ -2311,4 +2311,112 @@ main .container .portfolio .portfolio_cta {
   .titulo_segundo {
     font-size: 5rem;
   }
+}
+/* card */
+.card_container_NV {
+  padding: 5% 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card_container2_NV {
+  padding: 5% 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card_container3_NV {
+  padding: 5% 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card_picture_NV {
+  margin: 10% 10% 0 0;
+  width: 90%;
+  height: 210px;
+  display: block;
+}
+
+.actuali {
+  color: #65dbed;
+  margin: 8px;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin: 8px;
+}
+
+.btn_NV {
+  display: block;
+  text-align: center;
+  padding: 50px;
+}
+
+.btn_cm {
+  color: white;
+  text-decoration: none;
+  background-color: #0bc6e3;
+  padding: 10px 50px;
+  margin-top: 20px;
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  margin: 0;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card_container_NV {
+    padding: 2% 2%;
+    justify-content: space-around;
+  }
+}
+/* modo */
+.modo_NV {
+  padding: 2% 60px;
+  width: 120%;
+  background: linear-gradient(10, 5deg, 2%);
+}
+
+.modo_espacio_NV {
+  align-items: center;
+  padding: 30px;
+  max-width: 1200px;
+  background-color: #061c25;
+}
+
+.modo_title {
+  margin: auto;
+  color: white;
+  font-size: 2.7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .modo_espacio_NV {
+    padding: 20px;
+  }
+  .modo_NV {
+    width: 100%;
+  }
+  .modo_title {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 470px) {
+  .modo_NV {
+    width: 100%;
+  }
+  .modo_espacio_NV {
+    padding: 10px;
+  }
+  .modo_title {
+    font-size: 1.7rem;
+  }
 }/*# sourceMappingURL=app.css.map */
