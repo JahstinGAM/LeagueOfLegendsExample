@@ -25,6 +25,13 @@ Route::get('/categorias/mod/{id}',  [App\Http\Controllers\CategoriaController::c
 Route::post('/categorias/mod/{id}',  [App\Http\Controllers\CategoriaController::class,'postmod']);
 Route::get('/categorias/delete/{id}', [App\Http\Controllers\CategoriaController::class,'delete']);
 
+
+Route::get('/skins', [App\Http\Controllers\SkinController::class,'index']);
+Route::get('/skins/crear', [App\Http\Controllers\SkinController::class,'crear']);
+Route::post('/skins/crear', [App\Http\Controllers\SkinController::class,'postcrear']);
+
+Route::get('/salida', [App\Http\Controllers\SalidaController::class,'index']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
