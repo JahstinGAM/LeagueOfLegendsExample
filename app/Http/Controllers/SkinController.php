@@ -24,6 +24,7 @@ class SkinController extends Controller
         $s->nombre = $r ->nombre;
         $s->img = $r -> file("img")->store("img");
         $s->precio = $r -> precio;
+        $s->descripcion = $r -> descripcion;
         $s->categoria_id = $r -> categoria_id;
         // var_dump($cat);
         $s->save();

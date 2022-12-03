@@ -22,25 +22,32 @@
     <form action="" method="post" enctype="multipart/form-data" class="bg-dark">
         @csrf
         <div class="mb-3">
-          <label for="" class="form-label h4">Nombre de la skin</label>
+          <label for="" class="form-label h4 text-light">Nombre de la skin</label>
           <input type="text"
             class="form-control" name="nombre" id="" aria-describedby="helpId" placeholder="" required value="{{old('nombre')}}">
           <small id="helpId" class="form-text text-muted">Ej: Ahri de Arcadia</small>
         </div>
         <div class="mb-3">
-          <label for="" class="form-label h4">Seleccione imagen</label>
+          <label for="" class="form-label h4 text-light">Seleccione imagen</label>
           <input type="file" class="form-control" name="img" id="" placeholder="" aria-describedby="fileHelpId">
           <div id="fileHelpId" class="form-text">Adjuntar imagen de la skin</div>
         </div>
         <div class="mb-3">
-          <label for="precio" class="form-label h4">Precio</label>
+          <label for="precio" class="form-label h4 text-light">Precio</label>
           <input type="number"
             class="form-control" name="precio" id="precio" aria-describedby="helpId" placeholder="">
           <small id="helpId" class="form-text text-muted">Ej: 80, 30, 20</small>
         </div>
 
+        <div class="mb-3">
+            <label for="descripcion" class="form-label h4 text-light">Descripción</label>
+            <input type="text"
+              class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">Ej: Es un aspecto muy importante ya que...</small>
+          </div>
+
           <div class="mb-3">
-            <label for="categoria_id" class="form-label h4">Categoriadel producto</label>
+            <label for="categoria_id" class="form-label h4 text-light">Categoria del producto</label>
             <select class="form-select form-select-lg" name="categoria_id" id="categoria_id">
                 <option selected>Seleccione una categoria</option>
                 @foreach ($listacat as $cat)

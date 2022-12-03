@@ -10,11 +10,11 @@
 <div class="row">
     <div class="col-md-6">
         <div class="mb-3">
-            <label for="skin" class="form-label">Skin</label>
+
             <select class="form-select form-select-lg" name="skin" id="skin">
                 <option selected>Seleccione una skin</option>
                 @forelse ($listaskin as $s)
-                    <option value="{{$s->id}}" data-precio="{{$s->precio}}">{{$s->nombre}}</option>
+                    <option value="{{$s->id}}" data-precio="{{$s->precio}}" data-descripcion="{{$s->descripcion}}">{{$s->nombre}}</option>
                 @empty
                 <option>No hay skins</option>
                 @endforelse
@@ -36,22 +36,21 @@
                         <tr>
                             <th scope="col">Skin</th>
                             <th scope="col">Precio</th>
+                            <th scope="col">Descripción</th>
                             <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
 
                         <tr class="">
-                            <tr >
-                                <td scope="row">R1C1</td>
-                                <td>R1C2</td>
-                                <td>R1C3</td>
-                            </tr>
+
+
                         </tr>
                     </tbody>
                 </table>
             </div>
             <button type="submit" class="btn btn-primary">Vender</button>
+
         </form>
     </div>
 </div>
@@ -63,14 +62,26 @@
                 function (e) {
                     let el = `
                     <tr >
-                            <td>R1C1</td>
-                            <td>R1C2</td>
-                            <td>R1C3</td>
+                            <td>
+                                <input type="text" class="form-control" name="id[]" id="id" placeholder="" readonly value="${$('#skin').val()}">
+                            </td>
+                            <td>
+                                <input type="number" class="form-control" name="precio[]" id="precio" placeholder="" readonly value="${$('#skin').find(':selected').data('precio')}">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" name="descripcion[]" id="descripcion" placeholder="" readonly value="${$('#skin').find(':selected').data('descripcion')}">
+                            </td>
+                            <td>
+                                <button class="btn btn-danger" type="button" id="btnDel">Eliminar</button>
+                            </td>
                         </tr>
                         `;
                         $('tbody').append(el);
                 }
-            )
+            );
+            $('table').delegate('#btnDel', 'click',function(){
+                this.closest('tr').remove();
+            });
         });
     </script>
 @endsection

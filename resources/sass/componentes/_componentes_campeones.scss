@@ -614,6 +614,7 @@
             grid-area: regiones_parr;
             text-align: center;
             font-size: 1.7rem;
+            line-height: 2rem;
           }
           @media screen and (max-width: map-get(base_campeones.$breakpointss, "large")) {
             .regiones_parr{
@@ -626,6 +627,7 @@
             }
             .regiones_parr{
               font-size: 1.1rem;
+              line-height: 1.2rem;
             }
           }
     }

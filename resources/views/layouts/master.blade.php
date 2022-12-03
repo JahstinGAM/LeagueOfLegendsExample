@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>League Of Legends</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     @yield('libreria')
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -15,6 +16,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/app.css'])
 </head>
+
 <body>
     <nav class="navbar">
         <input type="checkbox">
@@ -70,7 +72,7 @@
                         </a>
                     </div>
                     <div class="nav-link">
-                        <a href="{{url('skins')}}"><p>
+                        <a href="{{url('catalogo')}}"><p>
                             SKINS
                         </p>
                             <div class="sublinks-underline"></div>
@@ -122,9 +124,44 @@
                 <span class="abrir" title="Abrir"></span>
             </label>
             <div class="buttons">
-                <a href="#" class="btn-sesion"><button>INICIAR SESIÓN</button></a>
-                <a href="#" class="btn-jugar"><button>JUGAR AHORA</button></a>
+                <a href="{{ route('login') }}" class="btn-sesion"><button>INICIAR SESIÓN</button></a>
+                <a href="{{ route('register') }}" class="btn-jugar"><button>REGISTRARSE</button></a>
             </div>
+             <!-- Right Side Of Navbar -->
+             <ul class="navbar-nav ms-auto">
+                <!-- Authentication Links -->
+                @guest
+                    @if (Route::has('login'))
+
+                    @endif
+
+                    @if (Route::has('register'))
+
+                    @endif
+                @else
+                    <li class="nav-item dropdown">
+                        <a class="btn_log" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                           <p class="btn_log_texto">
+                            {{ Auth::user()->name }}
+                           </p>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end " aria-labelledby="navbarDropdown" >
+                            <a class="btn_log"  href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                              <p class="btn_log_texto">
+                                {{ __('Cerrar Sesión') }}
+                              </p>
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+            </ul>
 
         </div>
     </header>

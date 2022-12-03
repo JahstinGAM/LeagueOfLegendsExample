@@ -11,4 +11,7 @@ class Skin extends Model
     public function catgoria(){
         return $this->belongsTo(Categoria::class);
     }
+    public function ventas(){
+        return $this->belongsToMany(Venta::class);
+    }
 }

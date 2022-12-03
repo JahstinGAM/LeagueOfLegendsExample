@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('skins', function (Blueprint $table) {
+        Schema::create('skin_venta', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 50);
-            $table->string('img');
-            $table->decimal('precio',5,2);//toma en cuenta 5 digitos, dos decimales y tres enteros
-            $table->string('descripcion',80);
-            $table->unsignedBigInteger('categoria_id');
+            $table->decimal("precio",5,2);
+            $table->string("descripcion",80);
+            $table->unsignedBigInteger("venta_id");
+            $table->unsignedBigInteger("skin_id");
+            $table->foreign("venta_id")->references("id")->on("ventas");
+            $table->foreign("skin_id")->references("id")->on("skins");
             $table->timestamps();
-            $table->foreign('categoria_id')->references('id')->on('categorias');
         });
     }
 
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('skins');
+        Schema::dropIfExists('skin_venta');
     }
 };

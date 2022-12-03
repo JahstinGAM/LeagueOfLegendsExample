@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('skins', function (Blueprint $table) {
+        Schema::create('ventas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre', 50);
-            $table->string('img');
-            $table->decimal('precio',5,2);//toma en cuenta 5 digitos, dos decimales y tres enteros
-            $table->string('descripcion',80);
-            $table->unsignedBigInteger('categoria_id');
+            $table->boolean('estado')->default(1);
+            $table->date('fecha');
             $table->timestamps();
-            $table->foreign('categoria_id')->references('id')->on('categorias');
         });
     }
 
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('skins');
+        Schema::dropIfExists('ventas');
     }
 };

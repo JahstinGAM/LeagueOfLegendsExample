@@ -22,13 +22,13 @@
     <form action="" method="post" enctype="multipart/form-data" class="bg-dark">
         @csrf
         <div class="mb-3">
-          <label for="" class="form-label h4">Nombre</label>
+          <label for="" class="form-label h4 text-light">Nombre</label>
           <input type="text"
             class="form-control g-secondary" name="nombre" id="" aria-describedby="helpId" placeholder="" required value="{{old('nombre')}}">
           <small id="helpId" class="form-text text-muted">Ej: Ahri,Darius,Lux,etc </small>
         </div>
         <div class="mb-3">
-          <label for="" class="form-label h4">Seleccionar imagen</label>
+          <label for="" class="form-label h4 text-light">Seleccionar imagen</label>
           <input type="file" class="form-control bg-" name="img" id="" placeholder="" aria-describedby="fileHelpId">
           <div id="fileHelpId" class="form-text h4">Adjuntar archivo del campeon.</div>
         </div>
