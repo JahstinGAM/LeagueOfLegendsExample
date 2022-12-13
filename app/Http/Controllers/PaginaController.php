@@ -22,4 +22,12 @@ class PaginaController extends Controller
     {
         return view('paginas.historias');
     }
+    public function todas()
+    {
+        return view('paginas.todas');
+    }
+    public function actualizaciones()
+    {
+        return view('paginas.actualizaciones');
+    }
 }

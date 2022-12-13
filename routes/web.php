@@ -27,6 +27,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/skins', [App\Http\Controllers\SkinController::class,'index']);
     Route::get('/skins/crear', [App\Http\Controllers\SkinController::class,'crear']);
     Route::post('/skins/crear', [App\Http\Controllers\SkinController::class,'postcrear']);
+    Route::get('/skins/modi/{id}',  [App\Http\Controllers\SkinController::class,'modi']);
+    Route::post('/skins/modi/{id}',  [App\Http\Controllers\SkinController::class,'postmodi']);
+    Route::get('/skins/deletes/{id}', [App\Http\Controllers\SkinController::class,'deletes']);
+    Route::get('/skins/imp', [App\Http\Controllers\SkinController::class,'download']);
+
 
 });
 
@@ -34,7 +39,9 @@ Route::get('/', [App\Http\Controllers\PaginaController::class,'index']);
 Route::get('/campeones', [App\Http\Controllers\PaginaController::class,'campeones']);
 Route::get('/historias', [App\Http\Controllers\PaginaController::class,'historias']);
 Route::get('/notas', [App\Http\Controllers\PaginaController::class,'notas']);
+Route::get('/actualizaciones', [App\Http\Controllers\PaginaController::class,'actualizaciones']);
 Route::get('/catalogo', [App\Http\Controllers\CatalogoController::class,'index']);
+Route::get('/todas', [App\Http\Controllers\PaginaController::class,'todas']);
 
 Auth::routes();
 

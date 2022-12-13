@@ -1,5 +1,5 @@
 @use "../base";
-@use "../base/base_campeones";
+@use "../base/base_catalogo";
 @use "../base/mixins_campeones";
 
 .btn_catalogo{
@@ -110,18 +110,21 @@
           }
           .catalogo_nombre{
             .nombre{
+                text-transform: uppercase;
                 transition: 1s;
                 text-align: center;
                 font-weight: 600;
                 color: #ffffff;
                 font-size: 2rem;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(11, 11, 11, 0.2) 100%);
               }
               .precio{
                 text-align: center;
-                color: rgb(21, 163, 16);
+                color: rgb(9, 251, 1);
                 font-weight: 600;
                 font-size: 1.5rem;
                 transition: 1.5s;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(11, 11, 11, 0.2) 100%);
               }
           }
       }
@@ -175,25 +178,25 @@
         border-color: base.$color-secondary;
         background-position-x: 60%;
     }
-@media screen and (max-width: map-get(base_campeones.$breakpointss, "large")) {
-  .catalogo_contenedor{
-    grid-template-columns: 1fr 1fr;
-   }
-   .catalogo_figura{
-    max-width: 270px;
-    height: 440px;
-   }
-   .catalogo_carta{
-    justify-self: center;
-  }
-}
-@media screen and (max-width: map-get(base_campeones.$breakpointss, "medium")) {
-  .catalogo_contenedor{
-    grid-template-columns: 1fr;
-  }
-  .catalogo_figura{
-    height: 440px;
-  }
-}
+    @media screen and (max-width: map-get(base_catalogo.$breakpointsss, "large")) {
+
+          grid-template-columns: 1fr 1fr;
+
+         .catalogo_figura{
+          max-width: 270px;
+          height: 440px;
+         }
+         .catalogo_carta{
+          justify-self: center;
+        }
+      }
+      @media screen and (max-width: map-get(base_catalogo.$breakpointsss, "medium")) {
+
+          grid-template-columns: 1fr;
+
+        .catalogo_figura{
+          height: 440px;
+        }
+      }
 
 }

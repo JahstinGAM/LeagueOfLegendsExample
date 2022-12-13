@@ -25,13 +25,17 @@
             <span></span>
             <div class="menu">
                 <a href="{{url('/')}}" class="nav_link_resp">INICIO</a>
-                <a href="#Inicio" class="nav_link_resp">INFORMACION DEL JUEGO</a>
                 <a href="{{url('campeones')}}" class="nav_link_resp">CAMPEONES</a>
                 <a href="{{url('historias')}}" class="nav_link_resp">NOTICIAS</a>
                 <a href="{{url('notas')}}" class="nav_link_resp"> NOTAS DE VERSIÓN</a>
-                <a href="#Gameplay" class="nav_link_resp">DESCUBRIR</a>
+
                 <a href="#Gallery" class="nav_link_resp">INICIAR SESIÓN</a>
                 <a href="#Networks" class="nav_link_resp">JUGAR AHORA</a>
+                <a href="{{url('categorias/crear')}}" class="nav_link_resp">CREAR CATEGORIAS</a>
+                <a href="{{url('categorias')}}" class="nav_link_resp">VER CATEGORIAS</a>
+                <a href="{{url('skins/crear')}}" class="nav_link_resp">CREAR SKINS</a>
+                <a href="{{url('skins')}}" class="nav_link_resp">VER SKINS</a>
+                <a href="{{url('salida')}}" class="nav_link_resp">VENDER</a>
             </div>
     </nav>
     <header class="header menu_nav">
@@ -60,9 +64,16 @@
                 <div class="nav-links">
                     <div class="nav-link">
                         <a href="#">
-                            <p>INFORMACION DEL JUEGO</p>
-                            <div class="sublinks-underline"></div>
+                            <p>ADMINISTRACION<svg class="svg-flecha" viewBox="0 0 8 5"><path d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"></path></svg></p>
                         </a>
+                        <ul class="nav-sublinks">
+                            <div class="sublinks-underline"></div>
+                            <li class="nav-sublink"><a href="{{url('categorias/crear')}}">Crear categorias</a></li>
+                            <li class="nav-sublink"><a href="{{url('categorias')}}">Ver categorias</a></li>
+                            <li class="nav-sublink"><a href="{{url('skins/crear')}}">Crear Skins</a></li>
+                            <li class="nav-sublink"><a href="{{url('skins')}}">Ver skins</a></li>
+                            <li class="nav-sublink"><a href="{{url('salida')}}">Vender</a></li>
+                        </ul>
                     </div>
                     <div class="nav-link">
                         <a href="{{url('campeones')}}"><p>
@@ -84,15 +95,10 @@
                         </a>
                         <ul class="nav-sublinks">
                             <div class="sublinks-underline"></div>
-                            <li class="nav-sublink"><a href="#">Todas</a></li>
-                            <li class="nav-sublink"><a href="#">Actualizaciones del juego</a></li>
-                            <!-- <li class="nav-sublink"><a href="#">Esports</a></li>
-                            <li class="nav-sublink"><a href="#">Desarrollo</a></li> -->
+                            <li class="nav-sublink"><a href="{{url('todas')}}">Todas</a></li>
+                            {{-- <li class="nav-sublink"><a href="#">Actualizaciones del juego</a></li> --}}
                             <li class="nav-sublink"><a href="{{url('historias')}}">Historias</a></li>
-                            <!-- <li class="nav-sublink"><a href="#">Multimedia</a></li>
-                            <li class="nav-sublink"><a href="#">Merchandising</a></li>
-                            <li class="nav-sublink"><a href="#">Comunidad</a></li>
-                            <li class="nav-sublink"><a href="#">Riot Games</a></li> -->
+                            <li class="nav-sublink"><a href="{{url('actualizaciones')}}">Actualizaciones</a></li>
                         </ul>
                     </div>
                     <div class="nav-link">

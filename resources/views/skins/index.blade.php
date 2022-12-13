@@ -13,31 +13,37 @@
                     <th scope="col">Imagen</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Precio</th>
+                    <th scope="col">Descripción</th>
                     <th scope="col">Categoria</th>
                     <th scope="col" colspan="2">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 @forelse ($listaskin as $s)
+
                 <tr class="">
                     <td scope="row">{{$s->id}}</td>
                     <td><img src="{{asset('storage/'.$s->img )}}"  width="200px" alt=""></td>
                     <td>{{$s->nombre}}</td>
                     <td>{{$s->precio}}</td>
-                    <td>{{$s->categoria_id}}</td>
+                    <td>{{$s->descripcion}}</td>
+                     <td>{{$s->nombreCat}}</td>
+
+
                     <td>
-                        <a href="{{url('categorias/mod/'.$s->id)}}" class="btn btn-warning">Modificar</a>
+                        <a href="{{url('skins/modi/'.$s->id)}}" class="btn btn-warning">Modificar</a>
                     </td>
                     <td>
-                        <a href="{{url('categorias/delete/'.$s->id)}}" class="btn btn-danger">Eliminar</a>
+                        <a href="{{url('skins/deletes/'.$s->id)}}" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
                 @empty
                 <tr>No hay datos...</tr>
+
                 @endforelse
             </tbody>
         </table>
     </div>
-
+    <a href="{{url('skins/imp')}}" class="btn btn-primary">Imprimir</a>
 </div>
 @endsection

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>League Of Legends</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -17,8 +17,8 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
-    <nav class="navbar">
+<body class="body-sesion">
+    {{-- <nav class="navbar">
         <input type="checkbox">
             <span></span>
             <span></span>
@@ -166,9 +166,9 @@
             </ul>
 
         </div>
-    </header>
+    </header> --}}
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -189,7 +189,7 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Loogin') }}</a>
                                 </li>
                             @endif
 
@@ -220,13 +220,17 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
 
-        <main class="py-4">
+
+
+
+
+        <main>
             @yield('content')
         </main>
     </div>
-    <footer class="footer">
+    {{-- <footer class="footer">
         <div class="footer-bar">
             <div class="footer-content">
                 <div class="footer-links">
@@ -337,6 +341,6 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> --}}
 </body>
 </html>
